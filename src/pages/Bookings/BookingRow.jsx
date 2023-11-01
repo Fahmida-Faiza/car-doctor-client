@@ -1,7 +1,7 @@
 
 
 const BookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
-    const { _id, price, date, service ,img, status}= booking;
+    const { _id, price, date, service, img, status, customerName }= booking;
 
 
 
@@ -27,7 +27,7 @@ const BookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
                             <td>
                                
                 {service}
-                                
+                {/* {customerName}                 */}
                             </td>
                             <td>{date}</td>
                             <td>${price}</td>
