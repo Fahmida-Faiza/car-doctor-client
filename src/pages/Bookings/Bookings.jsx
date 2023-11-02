@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import BookingRow from "./BookingRow";
-import axios from "axios";
+// import axios from "axios";
 
 
 const Bookings = () => {
@@ -11,14 +11,14 @@ const Bookings = () => {
 
     useEffect( () => {
         //axios korley airokom
-        axios.get(url, {withCredentials: true})
-        .then(res => {
-            setBookings(res.data)
-        })
+        // axios.get(url, {withCredentials: true})
+        // .then(res => {
+        //     setBookings(res.data)
+        // })
 
-        // fetch(url)
-        // .then(res => res.json())
-        // .then(data => setBookings(data))
+        fetch(url, {credentials: 'include'})
+        .then(res => res.json())
+        .then(data => setBookings(data))
     }, [url])
 
 
